@@ -12,29 +12,28 @@ public class ThirdPersonPlayerController : MonoBehaviour
     public Vector3 anglesToRotate;
     private Vector3 currentDirectionVertex;
     public Rigidbody rb;
+
+    // 
     void Start()
     {
       rb = GetComponent<Rigidbody>();
       currentDirectionVertex = Vector3.forward * Time.deltaTime;
     }
 
-    
+    // 
     void FixedUpdate()
     {
         HandleZMovement();
-        NewRotate();      
+        // NewRotate();      
     }
 
+    // 
     void NewRotate(){
         anglesToRotate = new Vector3(0, joystick.Horizontal * rotationSpeed * Time.deltaTime, 0);
         transform.Rotate(anglesToRotate);
     }
 
-    void HandleRBRotattion(Vector3 rot){
-      
-      rb.transform.Rotate(rot);
-    }
-
+    // 
     void HandleZMovement()
     {
         
@@ -58,18 +57,17 @@ public class ThirdPersonPlayerController : MonoBehaviour
         
     }
 
+    // 
     void HandleXMovement()
     {
         inputX = joystick.Horizontal * moveSpeed * Time.deltaTime;
         if (inputX > 0)
         {
             transform.Translate(Vector3.right * moveSpeed * Time.deltaTime);
-            HandleRBRotattion(Vector3.right * moveSpeed * Time.deltaTime * 2);
         }
         if (inputX < 0)
         {
             transform.Translate(Vector3.left * moveSpeed * Time.deltaTime);
-            HandleRBRotattion(Vector3.left * moveSpeed * Time.deltaTime * 2);
         } 
     }
 }
