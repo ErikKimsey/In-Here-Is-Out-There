@@ -14,7 +14,7 @@ public class ThirdPersonCameraController : MonoBehaviour
     }
 
     // Update is called once per frame
-    void FixedUpdate()
+    void Update()
     {
       float X = joystick.Horizontal * moveSpeed;
       float Y = joystick.Vertical * moveSpeed;

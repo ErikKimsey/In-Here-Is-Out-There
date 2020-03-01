@@ -21,7 +21,7 @@ public class ThirdPersonPlayerController : MonoBehaviour
     }
 
     // 
-    void FixedUpdate()
+    void Update()
     {
         HandleZMovement();
         // NewRotate();      

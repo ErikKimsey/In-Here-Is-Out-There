@@ -14,9 +14,9 @@ public class Wavy_2 : MonoBehaviour
 
     void Start()
     {
-      // terrain = GetComponent<Terrain>();
+      terrain = GetComponent<Terrain>();
 
-      terrainHeightData = new float[rowsAndColumns , rowsAndColumns];
+      terrainHeightData = new float[rowsAndColumns, rowsAndColumns];
       HandleRefinementValues();
     }
 
