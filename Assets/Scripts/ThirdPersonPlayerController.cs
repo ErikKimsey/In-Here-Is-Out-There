@@ -7,10 +7,10 @@ public class ThirdPersonPlayerController : MonoBehaviour
     public float moveSpeed;
     public float rotationSpeed;
     private float inputX, inputY;
+    private Vector3 currentDirectionVertex;
     public DynamicJoystick joystick;
     public Transform rotationTarget;
     public Vector3 anglesToRotate;
-    private Vector3 currentDirectionVertex;
     public Rigidbody rb;
 
     // 
